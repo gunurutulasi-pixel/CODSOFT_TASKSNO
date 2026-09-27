@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager | To-Do List Application</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-check-double"></i> My Task Manager</h1>
+            <p>Organize your daily activities efficiently</p>
+        </header>
+
+        <!-- Task Input Form -->
+        <form id="task-form">
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off" required>
+                <button type="submit" id="add-btn"><i class="fas fa-plus"></i> Add Task</button>
+            </div>
+        </form>
+
+        <!-- Controls: Filters & Stats -->
+        <div class="controls">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <div class="task-stats">
+                <span>Total: <strong id="total-count">0</strong></span> |
+                <span>Completed: <strong id="completed-count">0</strong></span>
+            </div>
+        </div>
+
+        <!-- Task List Container -->
+        <ul id="task-list">
+            <!-- Dynamic tasks will be inserted here -->
+        </ul>
+
+        <div id="empty-state" class="hidden">
+            <i class="fas fa-clipboard-list"></i>
+            <p>No tasks found. Enjoy your free time!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
